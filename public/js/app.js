@@ -6,7 +6,7 @@ var location = document.getElementById("location");
 var forecast = document.getElementById("forecast")
 
 btn.addEventListener('click',()=>{
-    fetch('http://localhost:3000/weather?address='+inp.value)
+    fetch('/weather?address='+inp.value)
     .then((res)=>res.json())
     .then((res)=>{
          location.innerText = 'Location ' + res.address;
